@@ -5,20 +5,94 @@
   <title>Activity 1: Basic HTML Bio</title>
 </head>
 
-<body>
+<style>
+  
+ 
+  
+    @import url(https://fonts.googleapis.com/css?family=Righteous);
+  
+    p{
+        color: plum;
+        text-align: center;
+        font-size: 55px;
+        font-family: "Righteous", "serif";
+    }
+    ul{
+      color: white;
+      text-align: center;
+      font-size: 30px;
+      font-family: "Righteous", "serif";
+      }
+  
+  *, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    }
+  
+  html, body {
+    height: 100%;
+    }
+    body {
+      text-align: center;
+      background-color: hsla(230,40%,50%,1);
+      font-family: "Righteous", "serif";
+      }
+    body:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+      height: 100%;
+      }
+  
+  h1 {
+    display: inline-block;
+    color: white;
+    font-family: 'Righteous', serif;
+    font-size: 12em; 
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    }
+    h1:after {
+      content: attr(data-shadow);
+      position: absolute;
+      top: .06em; left: .06em;
+      z-index: -1;
+      text-shadow: none;
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48,20%,90%,1) 45%,
+          hsla(48,20%,90%,1) 55%,
+          transparent 0
+          );
+      background-size: .05em .05em;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+      animation: shad-anim 15s linear infinite;
+      }
+  
+  @keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+    }
+    
+    </style>
+  
+  <h1 data-shadow='MAGGIE'>MAGGIE</h1> 
+  
+  <p>Hi MTV welcome to my HTML crib.</p>
+  
+    <ul>
+      <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
+      <li><strong>Github:</strong> <a href="#">sampleName</a></li>
+      <li><strong>Twitter:</strong> <a href="#">coming soon</a></li>
+    </ul>
 
-  <h1>Maggie Brink</h1>
 
-  <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/918643/images/5200926/Pickle_rick_transparent.png" width="200" height="250" alt="Maggie Brink">
-
-  <p>Hi my name is Maggie Brink and this is some placeholder text.</p>
-  <p>A second short paragraph of placeholder text.</p>
-
-  <ul>
-    <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-    <li><strong>Twitter:</strong> <a href="#">coming soon</a></li>
-  </ul>
 
   <table>
     <tr>
@@ -46,3 +120,9 @@
 </body>
 
 </html>
+
+
+  
+
+
+
